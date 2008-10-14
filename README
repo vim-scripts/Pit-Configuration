@@ -1,0 +1,41 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2404
+
+pitconfig.vim can load vim's variables from pit configurations. you can hide secret variables(ex: password) in your vimrc. pitconfig.vim set variable into vim's global scope.
+
+ex)
+# vim
+:echo mypassword
+xxxxxx
+:PitAdd mypassword
+:e ~/.vimrc
+" remove mypassword setting in your vimrc
+:wq!
+
+# vim
+:echo mypassword
+xxxxxx
+
+
+---------------------------------
+:PitReload
+  reload pit config named as g:pitconfig_default
+
+:PitLoad profile
+  load pit config named as 'profile'
+
+:PitShow
+  show current pit config named as g:pitconfig_default
+:PitShow profile
+  show current pit config named as 'profile'
+
+:PitSave
+  save current variables to pit config which named as g:pitconfig_default
+:PitSave profile
+  save current variables to pit config which named as 'profile'
+
+:PitAdd varname
+  add variable to current pit config.
+
+:PitDel varname
+  delete variable from current pit config.
+
